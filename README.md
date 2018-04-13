@@ -16,3 +16,7 @@ pip install xxx -i https://pypi.douban.com/simple
 [global]
 index-url = https://pypi.tuna.tsinghua.edu.cn/simple
 ```
+
+### Reference
+* http://xujihui1985.github.io/pip/2014/02/18/install-pip-use-mirror
+* https://mirrors.tuna.tsinghua.edu.cn/help/pypi/
