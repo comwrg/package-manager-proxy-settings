@@ -22,7 +22,7 @@ index-url = https://pypi.tuna.tsinghua.edu.cn/simple
 * https://mirrors.tuna.tsinghua.edu.cn/help/pypi/
 
 ## git
-### git协议
+### clone with ssh
 在 文件 `~/.ssh/config` 后添加下面两行
 ```bash
 Host github.com
