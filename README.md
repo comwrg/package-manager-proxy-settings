@@ -22,6 +22,7 @@ index-url = https://pypi.tuna.tsinghua.edu.cn/simple
 * https://mirrors.tuna.tsinghua.edu.cn/help/pypi/
 
 ## git
+在 文件 `~/.ssh/config` 后添加下面两行
 ```bash
 Host github.com
 ProxyCommand nc -X 5 -x 127.0.0.1:1080 %h %p
