@@ -20,3 +20,11 @@ index-url = https://pypi.tuna.tsinghua.edu.cn/simple
 ### Reference
 * http://xujihui1985.github.io/pip/2014/02/18/install-pip-use-mirror
 * https://mirrors.tuna.tsinghua.edu.cn/help/pypi/
+
+## git
+```bash
+Host github.com
+ProxyCommand nc -X 5 -x 127.0.0.1:1080 %h %p
+```
+### Reference
+https://gist.github.com/laispace/666dd7b27e9116faece6
