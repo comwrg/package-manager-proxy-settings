@@ -30,3 +30,12 @@ ProxyCommand nc -X 5 -x 127.0.0.1:1080 %h %p
 ```
 ### Reference
 https://gist.github.com/laispace/666dd7b27e9116faece6
+
+## ruby or brew
+```bash
+socks5 = "127.0.0.1:1080"
+```
+add to `~/.curlrc`
+
+### Reference
+https://www.zhihu.com/question/31360766
