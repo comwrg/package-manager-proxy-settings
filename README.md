@@ -39,3 +39,14 @@ add to `~/.curlrc`
 
 ### Reference
 https://www.zhihu.com/question/31360766
+
+## Gradle
+这个浪费了好长时间额，在gradle.properties设置proxy的方法我试了没有用
+## Gradle
+1. Android SDK 里面钩上Force https://... to http://
+2. 运行下面的命令
+```
+./gradlew -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=1087 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=1087
+```
+### Reference
+https://stackoverflow.com/questions/5991194/gradle-proxy-configuration
