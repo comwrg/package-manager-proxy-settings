@@ -51,3 +51,8 @@ systemProp.https.proxyPort=1087
 ```
 ### Reference
 https://stackoverflow.com/questions/5991194/gradle-proxy-configuration
+
+## go get
+```
+https_proxy=127.0.0.1:1087 go get
+```
