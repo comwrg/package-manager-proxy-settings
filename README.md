@@ -56,3 +56,11 @@ https://stackoverflow.com/questions/5991194/gradle-proxy-configuration
 ```
 https_proxy=127.0.0.1:1087 go get
 ```
+
+## npm
+```
+npm config set proxy http://127.0.0.1:1087
+npm config set https-proxy http://127.0.0.1:1087
+```
+## reference
+* https://stackoverflow.com/questions/7559648/is-there-a-way-to-make-npm-install-the-command-to-work-behind-proxy
