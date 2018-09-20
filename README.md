@@ -64,3 +64,13 @@ npm config set https-proxy http://127.0.0.1:1087
 ```
 ## reference
 * https://stackoverflow.com/questions/7559648/is-there-a-way-to-make-npm-install-the-command-to-work-behind-proxy
+
+## gem
+~/.gemrc
+```
+---
+# See 'gem help env' for additional options.
+http_proxy: http://localhost:1087
+```
+## reference
+* google
