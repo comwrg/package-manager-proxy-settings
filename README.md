@@ -1,8 +1,7 @@
 # FUCK-GFW
 I do not want waste time in GFW again.
 ## pip
-### 临时使用
-~/.pip/pip.conf
+~/.config/pip/pip.conf
 ```
 [global]
 proxy=http://localhost:1087
