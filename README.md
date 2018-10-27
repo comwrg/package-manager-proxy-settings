@@ -20,7 +20,7 @@ ProxyCommand nc -X 5 -x 127.0.0.1:1080 %h %p
 ### Reference
 https://gist.github.com/laispace/666dd7b27e9116faece6
 
-## curl or brew
+## curl
 ```bash
 socks5 = "127.0.0.1:1080"
 ```
@@ -63,3 +63,8 @@ http_proxy: http://localhost:1087
 ```
 ## reference
 * google
+
+## brew
+```
+ALL_PROXY=socks5://localhost:1080 brew ...
+```
