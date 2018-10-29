@@ -43,8 +43,9 @@ https://stackoverflow.com/questions/5991194/gradle-proxy-configuration
 
 ## go get
 ```
-https_proxy=127.0.0.1:1087 go get
+HTTP_PROXY=socks5://localhost:1080 go get
 ```
+测试了下HTTPS_PROXY和ALL_PROXY都不起作用
 
 ## npm
 ```
