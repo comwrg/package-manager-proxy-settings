@@ -54,6 +54,8 @@ npm config set https-proxy http://127.0.0.1:1087
 ```
 用socks5就报错- -
 
+推荐使用yarn，npm是真的慢
+
 ## reference
 * https://stackoverflow.com/questions/7559648/is-there-a-way-to-make-npm-install-the-command-to-work-behind-proxy
 
