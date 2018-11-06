@@ -59,6 +59,18 @@ npm config set https-proxy http://127.0.0.1:1087
 ## reference
 * https://stackoverflow.com/questions/7559648/is-there-a-way-to-make-npm-install-the-command-to-work-behind-proxy
 
+
+## yarn
+```
+yarn config set proxy http://XX
+yarn config set https-proxy http://XX
+```
+不支持socks5
+
+### Reference
+https://github.com/yarnpkg/yarn/issues/3418
+
+
 ## gem
 ~/.gemrc
 ```
@@ -73,3 +85,4 @@ http_proxy: http://localhost:1087
 ```
 ALL_PROXY=socks5://localhost:1080 brew ...
 ```
+
