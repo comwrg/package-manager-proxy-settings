@@ -86,3 +86,13 @@ http_proxy: http://localhost:1087
 ALL_PROXY=socks5://localhost:1080 brew ...
 ```
 
+## wget
+```
+use_proxy=yes
+http_proxy=127.0.0.1:1087
+https_proxy=127.0.0.1:1087
+```
+~/.wgetrc
+
+### Reference
+* https://stackoverflow.com/questions/11211705/how-to-set-proxy-for-wget
