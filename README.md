@@ -17,6 +17,14 @@ proxy=http://localhost:1087
 Host github.com
 ProxyCommand nc -X 5 -x 127.0.0.1:1080 %h %p
 ```
+
+### clone with http
+```
+git config --global http.proxy http://127.0.0.1:1087
+git config --global https.proxy http://127.0.0.1:1087
+```
+建议使用http, 因为socks5 在使用git-lfs时会报错`proxyconnect tcp: dial tcp: lookup socks5: no such host`
+
 ### Reference
 https://gist.github.com/laispace/666dd7b27e9116faece6
 
