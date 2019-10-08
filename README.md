@@ -104,3 +104,13 @@ https_proxy=127.0.0.1:1087
 
 ### Reference
 * https://stackoverflow.com/questions/11211705/how-to-set-proxy-for-wget
+
+
+## snap
+```bash
+sudo snap set system proxy.http="http://127.0.0.1:1087"
+sudo snap set system proxy.https="http://127.0.0.1:1087"
+```
+
+### Reference
+https://askubuntu.com/questions/764610/how-to-install-snap-packages-behind-web-proxy-on-ubuntu-16-04#answer-1146047
