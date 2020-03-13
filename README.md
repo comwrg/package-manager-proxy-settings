@@ -114,3 +114,16 @@ sudo snap set system proxy.https="http://127.0.0.1:1087"
 
 ### Reference
 https://askubuntu.com/questions/764610/how-to-install-snap-packages-behind-web-proxy-on-ubuntu-16-04#answer-1146047
+
+
+## docker
+```
+$ vim /usr/lib/systemd/system/docker.service
+[Service]
+Environment="ALL_PROXY=socks5://localhost:1080"
+
+$ systemctl daemon-reload
+$ systemctl restart docker
+```
+
+必须是socks5，http不生效
