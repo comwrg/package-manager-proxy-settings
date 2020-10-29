@@ -55,6 +55,8 @@ HTTP_PROXY=socks5://localhost:1080 go get
 ```
 测试了下HTTPS_PROXY和ALL_PROXY都不起作用
 
+OR使用[goproxy.io](https://goproxy.io/)
+
 ## npm
 ```
 npm config set proxy http://127.0.0.1:1087
