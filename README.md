@@ -120,12 +120,14 @@ https://askubuntu.com/questions/764610/how-to-install-snap-packages-behind-web-p
 
 ## docker
 ```
-$ vim /usr/lib/systemd/system/docker.service
+$ sudo mkdir -p /etc/systemd/system/docker.service.d
+$ sudo vim /etc/systemd/system/docker.service.d/proxy.conf
+
 [Service]
 Environment="ALL_PROXY=socks5://localhost:1080"
 
-$ systemctl daemon-reload
-$ systemctl restart docker
+$ sudo systemctl daemon-reload
+$ sudo systemctl restart docker
 ```
 
 必须是socks5，http不生效
