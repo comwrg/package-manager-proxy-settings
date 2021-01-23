@@ -27,6 +27,32 @@ git config --global http.proxy http://127.0.0.1:1087
 ### Reference
 https://gist.github.com/laispace/666dd7b27e9116faece6
 
+## cargo
+Cargo 会依次检查以下位置
+1. 环境变量 `CARGO_HTTP_PROXY`
+```bash
+export CARGO_HTTP_PROXY=http://127.0.0.1:1080
+```
+2. [任意 `config.toml`](https://doc.rust-lang.org/cargo/reference/config.html#hierarchical-structure) 中的 `http.proxy`
+```toml
+[http]
+proxy = "127.0.0.1:1080"
+```
+3. 环境变量 `HTTPS_PROXY` & `https_proxy` & `http_proxy`
+```bash
+export https_proxy=http://127.0.0.1:1080
+export http_proxy=http://127.0.0.1:1080
+```
+`http_proxy` 一般来讲没必要，除非使用基于 HTTP 的 Crate Repository
+
+Cargo 使用 libcurl，故可接受任何符合 [libcurl format](https://everything.curl.dev/usingcurl/proxies) 的地址与协议
+
+( `127.0.0.1:1080` , `http://127.0.0.1:1080`, `socks5://127.0.0.1` ）均可
+
+### Reference
+https://doc.rust-lang.org/cargo/reference/config.html#httpproxy
+
+
 ## curl
 ```bash
 socks5 = "127.0.0.1:1080"
@@ -65,9 +91,14 @@ npm config set https-proxy http://127.0.0.1:1087
 
 推荐使用yarn，npm是真的慢
 
-## reference
+### reference
 * https://stackoverflow.com/questions/7559648/is-there-a-way-to-make-npm-install-the-command-to-work-behind-proxy
 
+## rustup
+```bash
+export https_proxy=http://127.0.0.1:1080
+```
+废物中国电信，不挂代理慢如龟
 
 ## yarn
 ```
