@@ -47,7 +47,7 @@ export http_proxy=http://127.0.0.1:1080
 
 Cargo 使用 libcurl，故可接受任何符合 [libcurl format](https://everything.curl.dev/usingcurl/proxies) 的地址与协议
 
-( `127.0.0.1:1080` , `http://127.0.0.1:1080`, `socks5://127.0.0.1` ）均可
+( `127.0.0.1:1080` , `http://127.0.0.1:1080`, `socks5://127.0.0.1:1080` ）均可
 
 ### Reference
 https://doc.rust-lang.org/cargo/reference/config.html#httpproxy
