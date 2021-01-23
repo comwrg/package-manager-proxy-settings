@@ -94,6 +94,11 @@ npm config set https-proxy http://127.0.0.1:1087
 ### reference
 * https://stackoverflow.com/questions/7559648/is-there-a-way-to-make-npm-install-the-command-to-work-behind-proxy
 
+## rustup
+```bash
+export https_proxy=http://127.0.0.1:1080
+```
+废物中国电信，不挂代理慢如龟
 
 ## yarn
 ```
