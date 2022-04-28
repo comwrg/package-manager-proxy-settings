@@ -74,6 +74,42 @@ systemProp.https.proxyPort=1087
 ### Reference
 https://stackoverflow.com/questions/5991194/gradle-proxy-configuration
 
+## Maven
+%Maven 安装目录%/conf/settings.xml
+```xml
+  <!-- proxies
+   | This is a list of proxies which can be used on this machine to connect to the network.
+   | Unless otherwise specified (by system property or command-line switch), the first proxy
+   | specification in this list marked as active will be used.
+   |-->
+  <proxies>
+    <!-- proxy
+     | Specification for one proxy, to be used in connecting to the network.
+     |
+    <proxy>
+      <id>optional</id>
+      <active>true</active>
+      <protocol>http</protocol>
+      <username>proxyuser</username>
+      <password>proxypass</password>
+      <host>proxy.host.net</host>
+      <port>80</port>
+      <nonProxyHosts>local.net|some.host.com</nonProxyHosts>
+    </proxy>
+    -->
+     <proxy>
+      <id>proxy</id>
+      <active>true</active>
+      <protocol>http</protocol>
+      <host>127.0.0.1</host>
+      <port>1087</port>
+    </proxy>
+  </proxies>
+```
+
+### Reference
+[https://maven.apache.org/guides/mini/guide-proxies.html](https://maven.apache.org/guides/mini/guide-proxies.html)
+
 ## go get
 ```
 HTTP_PROXY=socks5://localhost:1080 go get
