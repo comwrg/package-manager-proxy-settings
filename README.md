@@ -107,6 +107,9 @@ https://stackoverflow.com/questions/5991194/gradle-proxy-configuration
   </proxies>
 ```
 
+### Reference
+[https://maven.apache.org/guides/mini/guide-proxies.html](https://maven.apache.org/guides/mini/guide-proxies.html)
+
 ## go get
 ```
 HTTP_PROXY=socks5://localhost:1080 go get
