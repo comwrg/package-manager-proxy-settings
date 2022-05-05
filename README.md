@@ -52,6 +52,16 @@ Cargo 使用 libcurl，故可接受任何符合 [libcurl format](https://everyth
 ### Reference
 https://doc.rust-lang.org/cargo/reference/config.html#httpproxy
 
+## apt (apt-get)
+在 `/etc/apt/apt.conf.d/` 目录下新增 `proxy.conf` 文件，加入：
+```
+Acquire::http::Proxy "http://127.0.0.1:8080/";
+Acquire::https::Proxy "http://127.0.0.1:8080/";
+```
+注：无法使用Socks5代理。
+
+### Reference
+https://askubuntu.com/a/349765/883355
 
 ## curl
 ```bash
