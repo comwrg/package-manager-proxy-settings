@@ -204,3 +204,6 @@ $ sudo systemctl restart docker
 ELECTRON_GET_USE_PROXY=true
 GLOBAL_AGENT_HTTPS_PROXY=http://localhost:1080
 ```
+### References
+* https://www.electronjs.org/docs/latest/tutorial/installation#proxies
+* https://github.com/gajus/global-agent/blob/v2.1.5/README.md#environment-variables
