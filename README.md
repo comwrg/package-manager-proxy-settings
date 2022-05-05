@@ -197,3 +197,10 @@ $ sudo systemctl restart docker
 ```
 
 必须是socks5，http不生效
+
+## Electron Dev Dependency
+设置环境变量
+```
+ELECTRON_GET_USE_PROXY=true
+GLOBAL_AGENT_HTTPS_PROXY=http://localhost:1080
+```
