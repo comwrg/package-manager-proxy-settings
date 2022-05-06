@@ -223,6 +223,7 @@ GLOBAL_AGENT_HTTPS_PROXY=http://localhost:1080
 * https://www.electronjs.org/docs/latest/tutorial/installation#proxies
 * https://github.com/gajus/global-agent/blob/v2.1.5/README.md#environment-variables
 
+
 ## Visual Studio Code Remote (WSL2)
 
 WSL2环境下可以通过设置`~/.vscode-server/server-env-setup`脚本文件，设置开发环境的环境变量，使用代理。
@@ -267,3 +268,9 @@ export all_proxy=$http_proxy
 
 ### References
 * https://code.visualstudio.com/docs/remote/ssh
+
+## Tips
+推荐使用Clash,[windows版](https://github.com/Fndroid/clash_for_windows_pkg)，[mac版](https://github.com/yichengchen/clashX)，开启Tun mode可以解决大部分的GFW问题
+
+### Reference
+https://docs.cfw.lbyczf.com/contents/tun.html
