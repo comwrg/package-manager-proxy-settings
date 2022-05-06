@@ -1,8 +1,54 @@
 # FUCK-GFW
 I do not want waste time in GFW again.
 
-<!-- START doctoc -->
-<!-- END doctoc -->
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**
+
+- [pip](#pip)
+  - [Reference](#reference)
+- [git](#git)
+  - [clone with ssh](#clone-with-ssh)
+  - [clone with http](#clone-with-http)
+  - [Reference](#reference-1)
+- [cargo](#cargo)
+  - [Reference](#reference-2)
+- [apt (apt-get)](#apt-apt-get)
+  - [Reference](#reference-3)
+- [curl](#curl)
+  - [Reference](#reference-4)
+- [Gradle](#gradle)
+  - [Reference](#reference-5)
+- [Maven](#maven)
+  - [Reference](#reference-6)
+- [go get](#go-get)
+- [npm](#npm)
+  - [reference](#reference-7)
+- [rustup](#rustup)
+- [yarn](#yarn)
+  - [Reference](#reference-8)
+- [gem](#gem)
+- [reference](#reference-9)
+- [brew](#brew)
+- [wget](#wget)
+  - [Reference](#reference-10)
+- [snap](#snap)
+  - [Reference](#reference-11)
+- [docker](#docker)
+- [Electron Dev Dependency](#electron-dev-dependency)
+  - [References](#references)
+- [Visual Studio Code Remote (WSL2)](#visual-studio-code-remote-wsl2)
+  - [References](#references-1)
+- [Visual Studio Code Remote (SSH)](#visual-studio-code-remote-ssh)
+  - [SSH主机无网络](#ssh%E4%B8%BB%E6%9C%BA%E6%97%A0%E7%BD%91%E7%BB%9C)
+  - [SSH主机在墙内](#ssh%E4%B8%BB%E6%9C%BA%E5%9C%A8%E5%A2%99%E5%86%85)
+  - [References](#references-2)
+- [Tips](#tips)
+  - [Reference](#reference-12)
+- [Scoop](#scoop)
+  - [Reference](#reference-13)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## pip
 ~/.config/pip/pip.conf
