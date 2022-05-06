@@ -1,5 +1,9 @@
 # FUCK-GFW
 I do not want waste time in GFW again.
+
+<!-- START doctoc -->
+<!-- END doctoc -->
+
 ## pip
 ~/.config/pip/pip.conf
 ```
