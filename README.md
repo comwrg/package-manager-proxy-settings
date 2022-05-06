@@ -222,3 +222,6 @@ GLOBAL_AGENT_HTTPS_PROXY=http://localhost:1080
 ```bash
 scoop config proxy 127.0.0.1:1080
 ```
+
+### Reference
+* https://github.com/ScoopInstaller/Scoop/wiki/Using-Scoop-behind-a-proxy#configuring-scoop-to-use-your-proxy
