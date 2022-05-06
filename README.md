@@ -223,7 +223,6 @@ GLOBAL_AGENT_HTTPS_PROXY=http://localhost:1080
 * https://www.electronjs.org/docs/latest/tutorial/installation#proxies
 * https://github.com/gajus/global-agent/blob/v2.1.5/README.md#environment-variables
 
-
 ## Visual Studio Code Remote (WSL2)
 
 WSL2环境下可以通过设置`~/.vscode-server/server-env-setup`脚本文件，设置开发环境的环境变量，使用代理。
@@ -274,3 +273,12 @@ export all_proxy=$http_proxy
 
 ### Reference
 https://docs.cfw.lbyczf.com/contents/tun.html
+
+
+## Scoop
+```bash
+scoop config proxy 127.0.0.1:1080
+```
+
+### Reference
+* https://github.com/ScoopInstaller/Scoop/wiki/Using-Scoop-behind-a-proxy#configuring-scoop-to-use-your-proxy
