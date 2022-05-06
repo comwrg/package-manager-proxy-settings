@@ -222,3 +222,9 @@ GLOBAL_AGENT_HTTPS_PROXY=http://localhost:1080
 ### References
 * https://www.electronjs.org/docs/latest/tutorial/installation#proxies
 * https://github.com/gajus/global-agent/blob/v2.1.5/README.md#environment-variables
+
+## Tips
+推荐使用Clash,[windows版](https://github.com/Fndroid/clash_for_windows_pkg)，[mac版](https://github.com/yichengchen/clashX)，开启Tun mode可以解决大部分的GFW问题
+
+### Reference
+https://docs.cfw.lbyczf.com/contents/tun.html
