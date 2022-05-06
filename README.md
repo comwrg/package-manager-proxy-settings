@@ -319,7 +319,7 @@ export all_proxy=$http_proxy
 * https://code.visualstudio.com/docs/remote/ssh
 
 ## Tips
-推荐使用Clash,[windows版](https://github.com/Fndroid/clash_for_windows_pkg)，[mac版](https://github.com/yichengchen/clashX)，开启Tun mode可以解决大部分的GFW问题
+推荐使用Clash,[windows版](https://github.com/Fndroid/clash_for_windows_pkg)，[mac版](https://github.com/yichengchen/clashX)（注意：[ClashX Pro](https://install.appcenter.ms/users/clashx/apps/clashx-pro/distribution_groups/public) 包含TUN功能，ClashX不包含），开启Tun mode可以解决大部分的GFW问题
 
 ### Reference
 https://docs.cfw.lbyczf.com/contents/tun.html
