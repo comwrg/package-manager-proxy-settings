@@ -18,7 +18,7 @@ Host github.com
 # Mac下
 ProxyCommand nc -X 5 -x 127.0.0.1:1080 %h %p
 # Linux下
-ProxyCommand nc --proxy-type socks5 --proxy 127.0.0.1:7891 %h %p
+ProxyCommand nc --proxy-type socks5 --proxy 127.0.0.1:1080 %h %p
 ```
 
 注意Linux和Mac下ncat/netcat区别，详见https://unix.stackexchange.com/questions/368155/what-are-the-differences-between-ncat-nc-and-netcat
