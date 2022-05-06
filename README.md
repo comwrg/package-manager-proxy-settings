@@ -169,7 +169,7 @@ https://github.com/yarnpkg/yarn/issues/3418
 # See 'gem help env' for additional options.
 http_proxy: http://localhost:1087
 ```
-## reference
+### reference
 * google
 
 ## brew
