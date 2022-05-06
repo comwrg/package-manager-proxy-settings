@@ -223,6 +223,52 @@ GLOBAL_AGENT_HTTPS_PROXY=http://localhost:1080
 * https://www.electronjs.org/docs/latest/tutorial/installation#proxies
 * https://github.com/gajus/global-agent/blob/v2.1.5/README.md#environment-variables
 
+
+## Visual Studio Code Remote (WSL2)
+
+WSL2环境下可以通过设置`~/.vscode-server/server-env-setup`脚本文件，设置开发环境的环境变量，使用代理。
+
+WSL2内环境访问Win下的代理程序端口代理(例子代码中http代理端口监听17070)，因为子网地址每次启动都不一样，需要动态处理。
+
+新建`~/.vscode-server/server-env-setup`文件，该文件会在VSCode启动WSL环境后被`source`。
+
+```
+WSL_HOST=$(sed -n '/^nameserver/p' /etc/resolv.conf | cut -d' ' -f2)
+export http_proxy=http://${WSL_HOST}:17070
+export https_proxy=$http_proxy
+export all_proxy=$http_proxy
+```
+
+### References
+* https://code.visualstudio.com/docs/remote/wsl
+
+## Visual Studio Code Remote (SSH)
+
+VSCode SSH后的环境不会使用本地界面VSCode内的代理设置，如果SSH主机没有默认网络链接或在墙内，会导致问题。
+
+### SSH主机无网络
+
+需要手动下载vscode 的server端传输部署。详情见链接
+
+  * https://stackoverflow.com/questions/56671520/how-can-i-install-vscode-server-in-linux-offline
+  * https://gist.github.com/b01/0a16b6645ab7921b0910603dfb85e4fb
+
+### SSH主机在墙内
+
+虽然文档未提及，但是可以使用WSL模式的方案，配置`~/.vscode-server/server-env-setup`文件设置代理。
+
+SSH主机有代理程序监听在17070端口：
+
+新建`~/.vscode-server/server-env-setup`文件，该文件会在VSCode启动WSL环境后被source。
+```
+export http_proxy=http://127.0.0.1:17070
+export https_proxy=$http_proxy
+export all_proxy=$http_proxy
+```
+
+### References
+* https://code.visualstudio.com/docs/remote/ssh
+
 ## Tips
 推荐使用Clash,[windows版](https://github.com/Fndroid/clash_for_windows_pkg)，[mac版](https://github.com/yichengchen/clashX)，开启Tun mode可以解决大部分的GFW问题
 
