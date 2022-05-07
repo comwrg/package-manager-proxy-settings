@@ -16,6 +16,7 @@ I do not want waste time in GFW again.
 - [npm](#npm)
 - [rustup](#rustup)
 - [yarn](#yarn)
+- [yarn2(berry)](#yarn2)
 - [gem](#gem)
 - [brew](#brew)
 - [wget](#wget)
@@ -189,9 +190,41 @@ yarn config set https-proxy http://XX
 ```
 不支持socks5
 
-### Reference
-https://github.com/yarnpkg/yarn/issues/3418
+## yarn2
+[Yarn 2+ - Official](https://yarnpkg.com/)
 
+```sh
+yarn config set httpProxy http://XX
+yarn config set httpsProxy http://XX
+```
+**不支持全局设置**  
+支持socks5  
+
+提示: 这个命令会修改项目目录下的`.yarnrc.yml`文件, 请留意不要把带有如:
+```yml
+httpsProxy: "socks5://127.0.0.1:1080"
+```
+的代码提交到仓库, 以免造成麻烦  
+<details>
+<summary>建议使用npm镜像而不是配置使用代理</summary>
+
+```sh
+yarn config set npmRegistryServer https://XXX
+```
+注意: 此方法不适用于下载yarn官方插件!  
+yarn的官方插件默认会从GitHub(raw.githubusercontent.com)上下载  
+您可能依旧需要配置代理
+</details>
+
+<details>
+  <summary>
+   
+   ### Reference
+  </summary>
+
+- [yarn doc - httpProxy](https://yarnpkg.com/configuration/yarnrc#httpProxy)
+- [yarn doc - httpsProxy](https://yarnpkg.com/configuration/yarnrc#httpsProxy)
+</details>
 
 ## gem
 ~/.gemrc
