@@ -322,3 +322,70 @@ option http_proxy http://localhost:1080/
 
 ### References
 https://openwrt.org/docs/guide-user/additional-software/opkg
+
+## `cabal` && `stack`
+
+```bash
+export http_proxy=http://127.0.0.1:17070
+export https_proxy=$http_proxy
+```
+
+`cabal` 可以选择发起请求使用的工具:
+
+```
+--http-transport=HttpTransport
+                                Set a transport for http(s) requests. Accepts
+                                'curl', 'wget', 'powershell', and
+                                'plain-http'. (default: 'curl')
+```
+
+参阅[curl](#curl)以及[wget](#wget).
+
+## Nix
+
+### MacOS
+
+1. 编辑`/Library/LaunchDaemons/org.nixos.nix-daemon.plist`, 在`EnvironmentVariables`节中插入：
+
+```plist
+	  <key>HTTP_PROXY</key>
+	  <string>http://127.0.0.1:1086</string>
+	  <key>HTTPS_PROXY</key>
+	  <string>http://127.0.0.1:1086</string>
+```
+
+Note: nix升级会覆盖掉这个服务配置文件， 所以每次升级之后都要重新走一遍流程。
+
+2. 重启nix服务:
+
+```bash
+launchctl unload org.nixos.nix-daemon.plist
+launchctl load -w org.nixos.nix-daemon.plist
+
+killall nix-daemon
+```
+
+请注意你的用户账号是否有适当的权限。
+
+### Linux (非nixOS)
+
+
+1. 创建环境变量配置文件,  这里是`/etc/nix/env`:
+
+```
+HTTP_PROXY=http://127.0.0.1:1080
+HTTPS_PROXY=http://127.0.0.1:1080
+```
+
+2. 编辑`/etc/systemd/system/nix-daemon.service`， 在`Service`节中插入:
+
+```
+EnvironmentFile="/etc/nix/env"
+```
+
+3. 重启服务:
+
+```bash
+systemctl daemon-reload
+systemctl restart nix-daemon
+```
