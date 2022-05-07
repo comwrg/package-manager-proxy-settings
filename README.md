@@ -311,3 +311,12 @@ scoop config proxy 127.0.0.1:1080
 
 ### Reference
 * https://github.com/ScoopInstaller/Scoop/wiki/Using-Scoop-behind-a-proxy#configuring-scoop-to-use-your-proxy
+
+## Windows PowerShell
+部分应用的代理原理与bash之类的终端类似
+```
+$Env:http_proxy='http://localhost:1080'
+```
+
+### References
+* https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_environment_variables?view=powershell-7.2
