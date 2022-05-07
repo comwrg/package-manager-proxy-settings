@@ -16,7 +16,7 @@ I do not want waste time in GFW again.
 - [npm](#npm)
 - [rustup](#rustup)
 - [yarn](#yarn)
-- [yarn2(berry)](#yarn2)
+- [yarn2](#yarn2)
 - [gem](#gem)
 - [brew](#brew)
 - [wget](#wget)
