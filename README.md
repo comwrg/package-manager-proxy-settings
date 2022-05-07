@@ -17,7 +17,6 @@ I do not want waste time in GFW again.
 - [rustup](#rustup)
 - [yarn](#yarn)
 - [gem](#gem)
-- [reference](#reference)
 - [brew](#brew)
 - [wget](#wget)
 - [snap](#snap)
