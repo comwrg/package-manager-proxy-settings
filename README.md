@@ -173,6 +173,7 @@ npm config set https-proxy http://127.0.0.1:1087
 
 ### reference
 * https://stackoverflow.com/questions/7559648/is-there-a-way-to-make-npm-install-the-command-to-work-behind-proxy
+* 有些包要在 postinstall 阶段下载内容的还需要配置环境变量 https://antfu.me/posts/npm-binary-mirrors 
 
 ## rustup
 ```bash
