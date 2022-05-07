@@ -190,6 +190,9 @@ yarn config set https-proxy http://XX
 ```
 不支持socks5
 
+### Reference
+https://github.com/yarnpkg/yarn/issues/3418
+
 ## yarn2
 [Yarn 2+ - Official](https://yarnpkg.com/)
 
