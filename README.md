@@ -26,6 +26,7 @@ I do not want waste time in GFW again.
 - [Visual Studio Code Remote (SSH)](#visual-studio-code-remote-ssh)
 - [Tips](#tips)
 - [Scoop](#scoop)
+- [OpenWRT opkg](#openwrt-opkg)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -311,3 +312,12 @@ scoop config proxy 127.0.0.1:1080
 
 ### Reference
 * https://github.com/ScoopInstaller/Scoop/wiki/Using-Scoop-behind-a-proxy#configuring-scoop-to-use-your-proxy
+
+## OpenWRT opkg
+在LUCI面版菜单配置或者/etc/opkg.conf末尾追加
+```
+option http_proxy http://localhost:1080/
+```
+
+### References
+https://openwrt.org/docs/guide-user/additional-software/opkg
