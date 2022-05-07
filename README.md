@@ -185,8 +185,8 @@ export https_proxy=http://127.0.0.1:1080
 
 ## yarn
 ```
-yarn config set proxy http://XX
-yarn config set https-proxy http://XX
+yarn config set proxy http://127.0.0.1:1087
+yarn config set https-proxy http://127.0.0.1:1087
 ```
 不支持socks5
 
@@ -197,8 +197,8 @@ https://github.com/yarnpkg/yarn/issues/3418
 [Yarn 2+ - Official](https://yarnpkg.com/)
 
 ```sh
-yarn config set httpProxy http://XX
-yarn config set httpsProxy http://XX
+yarn config set httpProxy http://127.0.0.1:1087
+yarn config set httpsProxy http://127.0.0.1:1087
 ```
 **不支持全局设置**  
 支持socks5  
@@ -212,7 +212,7 @@ httpsProxy: "socks5://127.0.0.1:1080"
 <summary>建议使用npm镜像而不是配置使用代理</summary>
 
 ```sh
-yarn config set npmRegistryServer https://XXX
+yarn config set npmRegistryServer https://127.0.0.1:1087
 ```
 注意: 此方法不适用于下载yarn官方插件!  
 yarn的官方插件默认会从GitHub(raw.githubusercontent.com)上下载  
