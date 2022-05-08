@@ -1,6 +1,8 @@
 # FUCK-GFW
 I do not want waste time in GFW again.
 
+如果你的包管理器想直接使用优秀的镜像仓库，请参考这个：[Thanks-Mirror](https://github.com/eryajf/Thanks-Mirror)
+
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **目录**
