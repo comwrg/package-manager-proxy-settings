@@ -379,3 +379,9 @@ choco config unset proxy
 
 ### Reference
 * https://docs.chocolatey.org/en-us/guides/usage/proxy-settings-for-chocolatey#explicit-proxy-settings
+
+
+
+## Stargazers over time
+
+[![Stargazers over time](https://starchart.cc/comwrg/package-manager-proxy-settings.svg)](https://starchart.cc/comwrg/package-manager-proxy-settings)
