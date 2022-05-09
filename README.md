@@ -29,6 +29,7 @@
 - [Tips](#tips)
 - [Scoop](#scoop)
 - [OpenWRT opkg](#openwrt-opkg)
+- [Chocolatey](#chocolatey)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
