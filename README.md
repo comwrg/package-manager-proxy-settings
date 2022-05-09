@@ -96,10 +96,15 @@ https://doc.rust-lang.org/cargo/reference/config.html#httpproxy
 Acquire::http::Proxy "http://127.0.0.1:8080/";
 Acquire::https::Proxy "http://127.0.0.1:8080/";
 ```
-注：无法使用Socks5代理。
+如果希望使用 Socks5 代理，则加入：
+```
+Acquire::http::Proxy "socks5h://127.0.0.1:8080/";
+Acquire::https::Proxy "socks5h://127.0.0.1:8080/";
+```
 
 ### Reference
 https://askubuntu.com/a/349765/883355
+https://github.com/lanlin/notes/issues/109
 
 ## curl
 ```bash
