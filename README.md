@@ -1,5 +1,4 @@
-# FUCK-GFW
-I do not want waste time in GFW again.
+# package manager proxy settings
 
 如果你的包管理器想直接使用优秀的镜像仓库，请参考这个：[Thanks-Mirror](https://github.com/eryajf/Thanks-Mirror)
 
