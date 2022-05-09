@@ -360,3 +360,17 @@ option http_proxy http://localhost:1080/
 
 ### References
 https://openwrt.org/docs/guide-user/additional-software/opkg
+
+## Chocolatey
+
+从0.9.9.9版本开始，choco支持在配置文件显式配置代理。
+```
+# 设置代理
+choco config set proxy http://localhost:8888
+# 取消代理
+choco config unset proxy
+```
+除此之外，从0.10.4版本开始，`choco`会自动寻找`http_proxy`和`https_proxy`或者`noproxy`环境变量，通过在命令行临时设置环境变量的方式也可以方便调整`choco`的代理设置。
+
+### Reference
+* https://docs.chocolatey.org/en-us/guides/usage/proxy-settings-for-chocolatey#explicit-proxy-settings
