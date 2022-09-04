@@ -30,6 +30,7 @@
 - [Scoop](#scoop)
 - [OpenWRT opkg](#openwrt-opkg)
 - [Chocolatey](#chocolatey)
+- [Guix](#guix)
 - [FAQ](#faq)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -380,6 +381,29 @@ choco config unset proxy
 ### Reference
 * https://docs.chocolatey.org/en-us/guides/usage/proxy-settings-for-chocolatey#explicit-proxy-settings
 
+
+## Guix
+Guix daemon honors `http_proxy` and `https_proxy` environment variables.
+
+### With Shepherd
+```
+# Set
+herd set-http-proxy guix-daemon http://localhost:1080
+
+# Clean
+herd set-http-proxy guix-daemon
+```
+
+### Manually or with other service supervisors
+```
+http_proxy="http://localhost:1080"
+env http_proxy="${http_proxy}" https_proxy="${http_proxy}" guix-daemon --build-users-group=guixbuild
+```
+
+### Reference
+* https://guix.gnu.org/en/manual/devel/en/guix.html#Proxy-Settings
+* https://guix.gnu.org/en/manual/devel/en/guix.html#index-guix_002dconfiguration
+
 ## FAQ
 
 如果希望在`root`下使用代理，需要使用`visudo`修改`/etc/sudoers`文件
@@ -391,5 +415,3 @@ Defaults        env_keep="http_proxy https_proxy ftp_proxy no_proxy DISPLAY XAUT
 
 ### Reference
 * https://www.chenyudong.com/archives/sudo-keep-env.html
-
-###
