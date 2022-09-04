@@ -31,6 +31,7 @@
 - [OpenWRT opkg](#openwrt-opkg)
 - [Chocolatey](#chocolatey)
 - [Guix](#guix)
+- [FAQ](#faq)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -61,7 +62,6 @@ ProxyCommand nc --proxy-type socks5 --proxy 127.0.0.1:1080 %h %p
 ```
 git config --global http.proxy http://127.0.0.1:1087
 ```
-建议使用http, 因为socks5 在使用git-lfs时会报错`proxyconnect tcp: dial tcp: lookup socks5: no such host`
 
 ### Reference
 https://gist.github.com/laispace/666dd7b27e9116faece6
@@ -183,7 +183,7 @@ npm config set https-proxy http://127.0.0.1:1087
 
 ### reference
 * https://stackoverflow.com/questions/7559648/is-there-a-way-to-make-npm-install-the-command-to-work-behind-proxy
-* 有些包要在 postinstall 阶段下载内容的还需要配置环境变量 https://antfu.me/posts/npm-binary-mirrors 
+* 有些包要在 postinstall 阶段下载内容的还需要配置环境变量 https://antfu.me/posts/npm-binary-mirrors
 
 ## rustup
 ```bash
@@ -208,28 +208,28 @@ https://github.com/yarnpkg/yarn/issues/3418
 yarn config set httpProxy http://127.0.0.1:1087
 yarn config set httpsProxy http://127.0.0.1:1087
 ```
-**不支持全局设置**  
-支持socks5  
+**不支持全局设置**
+支持socks5
 
 提示: 这个命令会修改项目目录下的`.yarnrc.yml`文件, 请留意不要把带有如:
 ```yml
 httpsProxy: "socks5://127.0.0.1:1080"
 ```
-的代码提交到仓库, 以免造成麻烦  
+的代码提交到仓库, 以免造成麻烦
 <details>
 <summary>建议使用npm镜像而不是配置使用代理</summary>
 
 ```sh
 yarn config set npmRegistryServer https://127.0.0.1:1087
 ```
-注意: 此方法不适用于下载yarn官方插件!  
-yarn的官方插件默认会从GitHub(raw.githubusercontent.com)上下载  
+注意: 此方法不适用于下载yarn官方插件!
+yarn的官方插件默认会从GitHub(raw.githubusercontent.com)上下载
 您可能依旧需要配置代理
 </details>
 
 <details>
   <summary>
-   
+
    ### Reference
   </summary>
 
@@ -381,6 +381,7 @@ choco config unset proxy
 ### Reference
 * https://docs.chocolatey.org/en-us/guides/usage/proxy-settings-for-chocolatey#explicit-proxy-settings
 
+
 ## Guix
 Guix daemon honors `http_proxy` and `https_proxy` environment variables.
 
@@ -402,3 +403,15 @@ env http_proxy="${http_proxy}" https_proxy="${http_proxy}" guix-daemon --build-u
 ### Reference
 * https://guix.gnu.org/en/manual/devel/en/guix.html#Proxy-Settings
 * https://guix.gnu.org/en/manual/devel/en/guix.html#index-guix_002dconfiguration
+
+## FAQ
+
+如果希望在`root`下使用代理，需要使用`visudo`修改`/etc/sudoers`文件
+```
+Defaults        env_reset
+# 新增下行
+Defaults        env_keep="http_proxy https_proxy ftp_proxy no_proxy DISPLAY XAUTHORITY"
+```
+
+### Reference
+* https://www.chenyudong.com/archives/sudo-keep-env.html
